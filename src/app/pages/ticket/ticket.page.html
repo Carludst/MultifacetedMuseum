@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      {{'Biglietti.AquistoBiglietto' | translate}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-item >
+      <ion-img src="/assets/icon/ticket.jpg" ></ion-img></ion-item>
+    <ion-card-header>
+      <ion-card-title>{{'Biglietti.Biglietto' | translate}}</ion-card-title>
+      <ion-icon slot="end" name="ticket-outline"></ion-icon>
+      <ion-row>
+        <ion-col>
+          {{'Biglietti.Totale' | translate}}
+        </ion-col>
+        <ion-col>
+          {{currencyIcon}}{{paymentAmount}}
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+      <div id="paypal-button-container"></div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

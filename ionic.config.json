@@ -1,0 +1,7 @@
+{
+  "name": "MultifacetedMuseum",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref="/tabs/account"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'Preferenze.title' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="isEmptyPreferences">
+    <div>
+      <p>
+        {{'Preferenze.Manca' | translate}}
+      </p>
+    </div>
+  </div>
+
+  <div *ngIf="!isEmptyPreferences">
+
+    <ion-card [routerLink]="['../tabs/showList', item.id]" *ngFor="let item of preferenceItem">
+      <ion-item>
+        <ion-icon name="brush-outline" slot="start" color="primary"></ion-icon>
+        <ion-label>{{ item?.nome }}</ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

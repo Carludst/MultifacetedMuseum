@@ -1,0 +1,19 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-title>{{"Show-list.Title" | translate}}</ion-title>
+    <ion-button (click)="presentActionSheet()" fill="clear" slot="end" size="small">
+      <ion-icon slot="icon-only" name="language-outline" color="light"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card [routerLink]="['./', Show.id]" *ngFor="let Show of showList">
+    <ion-item>
+      <ion-icon name="brush-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>{{ Show?.nome }}</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

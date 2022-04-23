@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{'Registrati.title' | translate}}</ion-title>
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <form [formGroup]="credentialForm">
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'Registrati.Nome' | translate}}"
+          formControlName="nome"
+          clearInput="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'Registrati.Cognome' | translate}}"
+          formControlName="cognome"
+          clearInput="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'Registrati.Email' | translate}}"
+          formControlName="email"
+          clearInput="true"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">{{'Registrati.EmailRichiesta' | translate}}</span>
+        <span *ngIf="email.errors?.email">{{'Registrati.EmailNonValida' | translate}}</span>
+      </div>
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'Registrati.Password' | translate}}"
+          type="password"
+          formControlName="password"
+          clearInput="true"></ion-input>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">{{'Registrati.PasswordRichiesta' | translate}}</span>
+        <span *ngIf="password.errors?.minlength">{{'Registrati.Errore' | translate}}</span>
+      </div>
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'Registrati.ConfermaPassword' | translate}}"
+          type="password"
+          formControlName="cpassword"
+          clearInput="true"
+        ></ion-input>
+      </ion-item>
+
+    </form>
+
+  </ion-list>
+
+  <div class="buttons">
+    <ion-button fill="outline" (click)="signUp()">{{'Registrati.Registrati' | translate}}</ion-button>
+  </div>
+
+</ion-content>

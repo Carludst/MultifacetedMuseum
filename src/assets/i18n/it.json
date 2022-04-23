@@ -1,0 +1,90 @@
+{
+  "Settings": {
+    "title": "Impostazioni",
+    "logOut": "Esci",
+    "Profilo": "Cambia Profilo",
+    "Lingua": "Cambia Lingua"
+  },
+
+  "Account": {
+    "title" : "Profilo",
+    "prefe" : "Preferiti",
+    "tick" : "Biglietti"
+  },
+
+  "Tabs": {
+    "ticket": "Biglietti",
+    "account": "Profilo",
+    "home": "Home",
+    "show": "Mostre"
+  },
+
+  "Map": {
+    "title": "Mappa"
+  },
+
+  "CambioCredenziali": {
+    "title": "Cambia Profilo",
+    "User": "Cambia Nome Utente",
+    "Password":  "Cambia Password",
+    "Email": "Cambia Email",
+    "name": "Nome",
+    "surname": "Cognome",
+    "email": "Nuova Email",
+    "password": "Nuova Password",
+    "salva": "Salva",
+    "confPassword": "Conferma Password",
+    "toastName": "Username modificato con successo!!",
+    "toastEmail": "Email modificata con successo!!",
+    "toastPassword": "Password modificata con successo!!",
+    "toastErrore": "Informazioni errate. Riprovare!!"
+  },
+
+  "Login": {
+    "Registrati": "Registrati",
+    "Login": "Accedi",
+    "Email": "Inserisci Email",
+    "Password": "Inserisci Password",
+    "ConfermaPassword": "Conferma Password",
+    "Nome": "Nome",
+    "Cognome": "Cognome",
+    "Errore": "Login non effettuato",
+    "EmailNonValida": "Email non Valida",
+    "EmailRichiesta": "Email Richiesta"
+  },
+
+  "Registrati": {
+    "title": "Registrati",
+    "Nome": "Nome",
+    "Cognome": "Cognome",
+    "Email": "Email",
+    "EmailNonValida": "Email non Valida",
+    "EmailRichiesta": "Email Richiesta",
+    "PasswordRichiesta": "Password Richiesta",
+    "Errore": "La password deve avere almeno 6 caratteri",
+    "Password": "Password",
+    "ConfermaPassword": "Conferma Password",
+    "Registrati": "Registrati",
+    "RegistrazioneNonEffettuata": "Registrazione non effettuata",
+    "PasswordNonCombacianti": "Passwords non combacianti!!"
+  },
+
+  "Preferenze": {
+    "title": "Preferiti",
+    "Manca": "Non hai aggiunto Preferenze"
+  },
+
+  "Biglietti":{
+    "AquistoBiglietto": "Acquisto biglietto",
+    "Totale": "Totale",
+    "Biglietto": "Biglietto"
+  },
+
+  "Show-list":{
+    "Title": "Mostre"
+  },
+
+  "News": {
+    "title" : "Notizie"
+  }
+}

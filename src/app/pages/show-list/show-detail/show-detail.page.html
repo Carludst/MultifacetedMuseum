@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref="/tabs/showList"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ loadedShow$?.nome }}</ion-title>
+    <ion-button (click)="addToPreferences(loadedShow$)" slot="end" fill="clear" size="small">
+      <ion-icon name="star" color="light"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content><ion-card>
+  <ion-item>
+    <ion-img [src]="loadedShow$?.img">
+      <h2>{{loadedShow$?.nome}}</h2>
+    </ion-img>
+  </ion-item>
+  <ion-item>
+    <ion-card-title ><b>{{loadedShow$?.nome}}</b></ion-card-title>
+  </ion-item>
+  <ion-col offset="40">
+    <ion-item>{{loadedShow$?.descrizione}}</ion-item>
+  </ion-col>
+</ion-card>
+</ion-content>

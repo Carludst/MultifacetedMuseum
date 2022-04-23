@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Home</ion-title>
+    <ion-button (click)="presentActionSheet()" fill="clear" slot="end" size="small">
+      <ion-icon slot="icon-only" name="language-outline" color="light"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-card [routerLink]="['./', news.id]" *ngFor="let news of newses">
+      <ion-card-header>
+        <ion-img [src]="news.img" ></ion-img>
+        <ion-card-subtitle>{{news?.data}}</ion-card-subtitle>
+        <ion-card-title><h4><b>{{news?.titolo}}</b></h4></ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

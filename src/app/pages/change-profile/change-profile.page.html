@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" fill="clear" (click)="goto()">
+      <ion-icon name="arrow-back-outline" color="light" slot="icon-only"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{'CambioCredenziali.title' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="changeProfileForm">
+    <div *ngIf=" changeId  ==='change_username'" class="buttons">
+      <ion-item>
+        <ion-input
+          placeholder="{{'CambioCredenziali.name' | translate}}"
+          formControlName="name"
+          clearInput="true"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'CambioCredenziali.surname' | translate}}"
+          formControlName="surname"
+          clearInput="true"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="changeProfile()">{{'CambioCredenziali.salva' | translate}}</ion-button>
+
+    </div>
+
+    <div *ngIf="changeId === 'change_email'" class="buttons">
+      <ion-item>
+        <ion-input
+          placeholder="{{'CambioCredenziali.email' | translate}}"
+          formControlName="email"
+          clearInput="true"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">{{'Login.EmailRichiesta' | translate}}</span>
+        <span *ngIf="email.errors?.email">{{'Login.EmailNonValida' | translate}}</span>
+      </div>
+
+      <ion-button (click)="changeProfile()">{{'CambioCredenziali.salva' | translate}}</ion-button>
+
+    </div>
+
+    <div *ngIf="changeId === 'change_password'" class="buttons">
+      <ion-item>
+        <ion-input
+          placeholder="{{'CambioCredenziali.password' | translate}}"
+          formControlName="password"
+          type="password"
+          clearInput="true"></ion-input>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">{{'Registrati.PasswordRichiesta' | translate}}</span>
+        <span *ngIf="password.errors?.minlength">{{'Registrati.Errore' | translate}}</span>
+      </div>
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'CambioCredenziali.confPassword' | translate}}"
+          formControlName="cpassword"
+          type="password"
+          clearInput="true"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="changeProfile()">{{'CambioCredenziali.salva' | translate}}</ion-button>
+
+    </div>
+
+    <div *ngIf="changeId === 'reauth'" class="buttons">
+      <ion-item>
+        <ion-input
+          placeholder="{{'Login.Email' | translate}}"
+          formControlName="reemail"
+          clearInput="true"></ion-input>
+      </ion-item>
+      <div *ngIf="(reemail.dirty || reemail.touched) && reemail.errors" class="errors">
+        <span *ngIf="reemail.errors?.required">{{'Login.EmailRichiesta' | translate}}</span>
+        <span *ngIf="reemail.errors?.email">{{'Login.EmailNonValida' | translate}}</span>
+      </div>
+
+      <ion-item>
+        <ion-input
+          placeholder="{{'Login.Password' | translate}}"
+          type="password"
+          formControlName="repassword"
+          clearInput="true"></ion-input>
+      </ion-item>
+      <div *ngIf="(repassword.dirty || repassword.touched) && repassword.errors" class="errors">
+        <span *ngIf="repassword.errors?.required">{{'Registrati.PasswordRichiesta' | translate}}</span>
+        <span *ngIf="repassword.errors?.minlength">{{'Registrati.Errore' | translate}}</span>
+      </div>
+
+      <ion-button (click)="changeProfile()">OK</ion-button>
+
+    </div>
+  </form>
+
+
+
+</ion-content>
+

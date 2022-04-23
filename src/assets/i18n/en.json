@@ -1,0 +1,80 @@
+{
+  "Settings": {
+    "title": "Settings",
+    "logOut": "Log Out",
+    "Profilo": "Change Profile",
+    "Lingua": "Change Language"
+  },
+  "Account": {
+    "title" : "Account",
+    "prefe" : "Preferences",
+    "tick" : "Tickets"
+  },
+  "Tabs": {
+    "ticket": "Ticket",
+    "account": "Account",
+    "home": "Home",
+    "show": "Show List"
+  },
+  "CambioCredenziali": {
+    "title": "Change Credentials",
+    "User": "Change Username",
+    "Password":  "Change Password",
+    "Email": "Change Email",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "New Email",
+    "password": "New Password",
+    "salva": "Save",
+    "confPassword": "Confirm Password",
+    "toastName": "Username succesfully mopdified!!",
+    "toastEmail": "Email succesfully mopdified!!",
+    "toastPassword": "Password succesfully mopdified!!",
+    "toastErrore": "Wrong Informations. Retry!!"
+  },
+  "Login": {
+    "Registrati": "Sign In",
+    "Login": "Login",
+    "Email": "Insert Email",
+    "Password": "Insert Password",
+    "ConfermaPassword": "Confirm Password",
+    "Nome": "Name",
+    "Cognome": "Surname",
+    "Errore": "Couldn't Login",
+    "EmailNonValida": "Not Valid Email",
+    "EmailRichiesta": "Request Email"
+  },
+  "Registrati": {
+    "title": "Sign In",
+    "Nome": "Name",
+    "Cognome": "Surname",
+    "Email": "Email",
+    "EmailNonValida": "Not Valid Email",
+    "EmailRichiesta": "Request Email",
+    "PasswordRichiesta": "Request Password",
+    "Errore": "Password must have at least 6 character",
+    "ConfermaPassword": "Confirm Password",
+    "Registrati": "Sign In",
+    "Password": "Password",
+    "RegistrazioneNonEffettuata": "Cannot Registrate",
+    "PasswordNonCombacianti": "Different Passwords"
+  },
+  "Preferenze": {
+    "title": "Favorites",
+    "Manca": "You don't have added preferences"
+  },
+
+  "Biglietti":{
+    "AquistoBiglietto": "Buy ticket",
+    "Totale": "Total",
+    "Biglietto": "Ticket"
+  },
+
+  "Show-list":{
+    "Title": "Show"
+  },
+
+  "News": {
+    "title" : "News"
+  }
+}

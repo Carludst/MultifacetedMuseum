@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="credentialForm">
+    <ion-item>
+      <ion-input
+        placeholder="{{'Login.Email' | translate}}"
+        formControlName="email"
+        clearInput="true"></ion-input>
+    </ion-item>
+    <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+      <span *ngIf="email.errors?.required">{{'Login.EmailRichiesta' | translate}}</span>
+      <span *ngIf="email.errors?.email">{{'Login.EmailNonValida' | translate}}</span>
+    </div>
+
+    <ion-item>
+      <ion-input
+        placeholder="{{'Login.Password' | translate}}"
+        type="password"
+        formControlName="password"
+        clearInput="true"></ion-input>
+    </ion-item>
+  </form>
+  <div class="buttons">
+    <ion-button fill="outline" (click)="signIn()">{{'Login.Login' | translate}}</ion-button>
+    <ion-button fill="outline" (click)="toRegister()">{{'Login.Registrati' | translate}}</ion-button>
+  </div>
+</ion-content>
