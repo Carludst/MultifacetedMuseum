@@ -24,7 +24,9 @@ export class StorageService {
     return this.storage.keys().then(result => {
       if (result.indexOf(key) != null){
         return true;
-      } else { return false; }
+      } else {
+        return false;
+      }
     });
   }
 }
